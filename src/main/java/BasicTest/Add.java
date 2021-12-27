@@ -1,12 +1,8 @@
 package BasicTest;
 
 public class Add {
-    int n1;
-    int n2;
-
-    public Add() {
-
-    }
+    int n1 = 0;
+    int n2 = 0;
 
     public Add(int n1, int n2) {
         this.n1 = n1;   // this = class Add()
