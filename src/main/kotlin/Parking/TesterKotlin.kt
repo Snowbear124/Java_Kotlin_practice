@@ -1,9 +1,20 @@
 package Parking
 
+import java.time.LocalDateTime
 import java.util.*
 
 fun main() {
-    Date().calendar()
+//    Date().calendar()
+
+    //Car parking
+    var id = "AA-0002"
+    var enter = LocalDateTime.of(2022,1,3,9,0,0)
+
+    val car2 = CarKotlin(id, enter)
+    car2.leave = LocalDateTime.of(2022,1,3,13,30,0)
+    println("Car id $id")
+    println("Time = ${car2.duration()}")
+    println("Free = ${car2.free()}")
 }
 
 class Date() {

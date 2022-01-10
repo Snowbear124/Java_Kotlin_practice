@@ -10,7 +10,18 @@ import java.util.Date;
 public class Tester {
     public static void main(String[] args) {
 //        simpleDate();
-        java8();  //Java8的時間設定方式
+//        java8();  //Java8的時間設定方式
+
+        //car parking
+        LocalDateTime enterDate = LocalDateTime.of(2022, 1, 1, 12, 0, 0);
+        LocalDateTime leaveDate = LocalDateTime.of(2022, 1, 1, 14, 7, 0);
+        String carId = "AA-0001";
+
+        Car car1 = new Car(carId, enterDate);
+        car1.setLeaveTime(leaveDate);
+        System.out.println("Car: " + carId);
+        System.out.println("Time = " + car1.getDuration() + " minutes");
+        System.out.println("Free = $" + car1.free());
     }
 
     private static void java8() {
