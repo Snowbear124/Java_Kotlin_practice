@@ -15,6 +15,12 @@ fun main() {
     println("Car id $id")
     println("Time = ${car2.duration()}")
     println("Free = ${car2.free()}")
+
+    val test = getSetTest("0001")
+    test.newData
+    test.newData = "0002"
+    test.newData
+    test.timeTest = LocalDateTime.now()
 }
 
 class Date() {
