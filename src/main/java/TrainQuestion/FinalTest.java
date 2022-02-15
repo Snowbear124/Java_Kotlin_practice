@@ -1,11 +1,8 @@
 package TrainQuestion;
 
 public class FinalTest {
-
-
     public static void main(String[] args) {
         CommonClass f = new CommonClass();
-
         // Max已被加上Fianl，無法被更改
 //        f.MAx = 20;
         f.Min = 5;
