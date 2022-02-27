@@ -2,13 +2,25 @@ package TrainQuestion;
 
 interface InterfacePeople {
     String name = "Jack";
-    final int minAge = 18;  // 在此定義fianl的話，可以省略fianl，fianl不能被更改
 
-    abstract void print();  // 介面裡的方法都預設為抽象方法(abstract)，無法實例化
+    // 在此定義fianl的話，可以省略fianl，fianl不能被更改
+    // 介面裡的變數都為fianl變數，無法定義fianl方法
+    final int minAge = 18;
+//    final void func_2() {}
+
+    // 介面裡的方法都預設為抽象方法(abstract)，無法實例化
+    // 也無法定義抽象變數
+    abstract void print();
+//    abstract int high = 165;
 }
 
 interface InterfaceFamily {
     int member = 1;
+}
+
+// 介面可以extends多個介面
+interface InterfaceExtends extends InterfacePeople, InterfaceFamily {
+
 }
 
 // 介面用implements繼承，並且可以同時繼承一個以上的介面
@@ -26,7 +38,7 @@ class InterfaceRun implements InterfacePeople, InterfaceFamily {
     // 可以再繼承Interface的class，執行主程式
     public static void main(String[] args) {
         InterfaceRun people = new InterfaceRun();
-        people.age = 20;    // 覆寫自己class的設定
+        people.age = 20;    // 覆寫自己class的設定，被繼承的介面變數可以直接被呼叫
         people.print();
     }
 }
