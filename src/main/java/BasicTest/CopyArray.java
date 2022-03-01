@@ -24,9 +24,43 @@ public class CopyArray {
         }
     }
 
+    public void sortOrder(int[] nums) {
+        Arrays.sort(nums);
+        System.out.print("sort: ");
+        for (int i : nums) {
+            System.out.print(i + ", ");
+        }
+        System.out.println();
+    }
+
+    public void fillArray(int[] nums) {
+        // 將陣列內所有元素變成2
+        Arrays.fill(nums, 2);
+        System.out.print("fill_1: ");
+        for (int i : nums) {
+            System.out.print(i + ", ");
+        }
+        System.out.println();
+    }
+
+    public void fillArray_2(int[] nums) {
+        // 將索引1~3的元素換成3
+        Arrays.fill(nums, 1, 3, 3);
+        System.out.print("fill_2: ");
+        for (int i : nums) {
+            System.out.print(i + ", ");
+        }
+        System.out.println();
+    }
+
     public static void main(String[] args) {
         CopyArray array = new CopyArray();
         int[] nums = {1, 4, 7, 8, 9, 3, 2};
+        int[] nums_2 = {1, 1, 1, 1, 1};
         array.copyArray(nums);
+        System.out.println();
+
+        array.fillArray(nums_2);
+        array.fillArray_2(nums_2);
     }
 }
