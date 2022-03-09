@@ -29,6 +29,35 @@ class ArrayTest {
         })
 
         intArray_3.indices
+
+
+        var theArray = Array(5, {3})
+        println("\n一微陣列")
+        theArray.forEach { print("$it, ") }
+
+        println()
+        var theArray_2 = Array<Any>(5, {1})
+        theArray_2.forEach { print("$it, ") }
+
+        println()
+        var thereArray = Array(3, {Array(2, {4})})
+        for (i in 0..1) {
+            if (i == 1) println()
+            for (j in 0..2) {
+                print("${thereArray[j][i]}, ")
+            }
+        }
+
+        println("\n")
+        var thereArray_2 = Array(3) {Array(2, {4})}
+        for (i in 0..1) {
+            if (i == 1) println()
+            for (j in 0..2) {
+                print("${thereArray_2[j][i]}, ")
+            }
+        }
+
+        var thereArray_3 = Array(3) {BooleanArray(2, {true})}
     }
 }
 
@@ -36,8 +65,8 @@ fun main() {
     var nums = intArrayOf(1, 2, 3, 4, 5)
     var nums_2 = intArrayOf(6, 7, 8)
     val array = ArrayTest().intArray(nums)
-    val array_2 = nums + nums_2
-    array_2.forEach {
-        print("$it,")
-    }
+//    val array_2 = nums + nums_2
+//    array_2.forEach {
+//        print("$it,")
+//    }
 }
